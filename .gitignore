@@ -1,0 +1,10 @@
+datos/raw/
+datos/interim/
+datos/processed/
+*.csv
+*.json
+*.gz
+*.zip
+venv/
+__pycache__/
+.env
