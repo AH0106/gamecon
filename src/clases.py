@@ -60,7 +60,7 @@ class Asistente:
     def __init__(self, nombre: str, intereses_declarados: List[str], intereses_deducidos: Optional[Dict[str, int]] = None, _id: Optional[ObjectId] = None):
         self._id = _id or ObjectId()
         self.nombre = nombre
-        self.intereses_declarados = intereses_declarados[:8]  # Tope de 8 intereses declarados
+        self.intereses_declarados: List[str] = intereses_declarados[:8]  # Tope de 8 intereses declarados
         self.intereses_deducidos = intereses_deducidos or {}
 
     def to_dict(self) -> dict:
