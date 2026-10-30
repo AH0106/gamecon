@@ -1,28 +1,41 @@
-import perfilar as p
+import pandas as pd
+from perfilar import cargar_datos_raw
 
+def obtener_datos_limpios():
+    df_games, df_anime, df_comics = cargar_datos_raw()
 
+    # 1. Juegos
+    df_games = df_games.copy().drop_duplicates()
+    cols_eliminar_games = ['Platform', 'NA_Sales', 'EU_Sales', 'JP_Sales', 'Other_Sales']
+    df_games = df_games.drop(columns=[c for c in cols_eliminar_games if c in df_games.columns])
+    df_games = df_games.rename(columns={'Name': 'name', 'Publisher': 'productor', 'Genre': 'genero'})
+    df_games = df_games.dropna(subset=['productor', 'name'])
+    df_games['genero'] = df_games['genero'].astype(str).str.strip()
+    df_games['dominio'] = 'juego'
 
-ds_games = p.df_games.copy()
-ds_anime = p.df_anime.copy()
-ds_comics = p.df_comics.copy()
+    # 2. Anime
+    df_anime = df_anime.copy().drop_duplicates()
+    cols_eliminar_anime = ['Type', 'Source', 'Episodes', 'Status', 'Airing', 'Aired From', 'Aired To', 'Synopsis']
+    df_anime = df_anime.drop(columns=[c for c in cols_eliminar_anime if c in df_anime.columns])
+    df_anime = df_anime.rename(columns={'Title': 'name', 'Studios': 'productor', 'Genres': 'genero'})
+    df_anime = df_anime.dropna(subset=['productor', 'name'])
+    df_anime['dominio'] = 'anime'
 
+    # 3. Cómics
+    df_comics = df_comics.copy().drop_duplicates(subset=['book_id'])
+    cols_a_borrar_comics = [
+        'text_reviews_count', 'series', 'language_code', 'popular_shelves', 'asin', 
+        'is_ebook', 'kindle_asin', 'format', 'link', 'authors', 'num_pages', 
+        'publication_day', 'isbn13', 'publication_month', 'edition_information', 
+        'publication_year', 'url', 'image_url', 'work_id', 'title_without_series'
+    ]
+    df_comics = df_comics.drop(columns=[c for c in cols_a_borrar_comics if c in df_comics.columns])
+    df_comics = df_comics.rename(columns={'title': 'name', 'publisher': 'productor'})
+    df_comics = df_comics.dropna(subset=['productor', 'name'])
+    df_comics['genero'] = 'Comic/Manga'
+    df_comics['dominio'] = 'manga_comic'
 
-ds_games = ds_games.drop_duplicates()
-ds_games = ds_games.dropna(subset=['Year', 'Publisher'])
-ds_game = ds_games.drop(columns = ['Platform','NA_Sales', 'Platform', 'EU_Sales', 'JP_Sales', 'Other_Sales'])
-ds_games = ds_games.rename(columns={'Name': 'name', 'Publisher': 'productor', })
+    return df_games, df_anime, df_comics
 
-#p.descripcion_completa(ds_games,'games')
-
-ds_anime = ds_anime.drop_duplicates()
-ds_anime = ds_anime.dropna(subset=['Title English', 'Title Japanese', 'Score', 'Rank', 'Studios', 'Genres', 'Themes'])
-ds_anime = ds_anime.drop(columns=['Type', 'Source', 'Episodes', 'Status', 'Airing', 'Aired From', 'Aired To','Synopsis'])
-ds_anime = ds_anime.rename(columns={'Title': 'name', 'Studios': 'productor', 'Genres': 'genero'})
-
-#p.descripcion_completa(ds_anime,'anime')
-
-
-ds_comics = ds_comics.drop_duplicates(subset=["book_id"])
-ds_comics = ds_comics.rename(columns={'title': 'name', 'publisher': 'productor'})
-ds_comics = ds_comics.drop(columns=['text_reviews_count', 'series',  'language_code', 'popular_shelves', 'asin', 'is_ebook', 'kindle_asin', 'format', 'link', 'authors', 'num_pages', 'publication_day', 'isbn13', 'publication_month', 'edition_information', 'publication_year', 'url', 'image_url', 'work_id', 'title_without_series'])
-#p.descripcion_completa(ds_comics, 'comics', subset=["book_id"])
+# Para importar directamente
+df_games, df_anime, df_comics = obtener_datos_limpios()
