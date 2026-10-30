@@ -3,10 +3,14 @@ import pandas as pd
 from pathlib import Path
 
 
-RAIZ = Path(__file__).resolve().parent.parent
+try:
+    RAIZ = Path(__file__).resolve().parent.parent
+except NameError:
+    cwd = Path.cwd()
+    RAIZ = cwd.parent if cwd.name == "src" else cwd
 RAW = RAIZ / "datos" / "raw"
 
-df_games = pd.read_csv(RAW / "vgsales.csv.zip")
+df_games = pd.read_csv(RAW / "vgsales.csv")
 df_anime = pd.read_csv(RAW / "anime-dataset-2025.csv")
 df_comics = pd.read_json(
     RAW / "goodreads_books_comics_graphic.json.gz",
@@ -21,11 +25,11 @@ def describe(df, name):
 
 def nulls_count(df, name):
     """ Función para ver los nulos de cada dataset"""
-    
+
     print("\nConteo de nulos en ", name)    # imprime: anime
     print(df.isnull().sum()[df.isnull().sum() > 0])
 
-def duplicates(df, name, subset=None):  
+def duplicates(df, name, subset=None):
     """ Duplicados por data set"""
     print("\nConteo de duplicados en ", name)
     print(df.duplicated(subset=subset).sum())
