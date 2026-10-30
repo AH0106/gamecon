@@ -1,3 +1,8 @@
+from pymongo import database_shared
+
+import limpieza as limp
+
+
 class tags: 
     """Vocabulario controlado y tabla de mapeo"""
     def __init__(self, id, nivel, origin, frecuency) -> None:
@@ -20,6 +25,12 @@ class stand:
 
     def agregar_stand(self, dataset): 
         """Funcion para agregar stands desde un dataset"""
+        for index, column in dataset['productor']:
+            stand= {
+                'id': index,
+                'name': dataset['name'],
+                'generos': dataset['genero']
+            }
         
 
 

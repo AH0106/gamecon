@@ -3,7 +3,7 @@ from pathlib import Path
 import os
 import shutil
 import urllib.request
-import kagglehub
+import kagglehub 
 
 
 # Determinar la raíz del proyecto de forma segura para Terminal y REPL
