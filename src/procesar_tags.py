@@ -1,4 +1,8 @@
+from operator import index
+from tarfile import NUL
+
 import pandas as pd
+from zmq import NULL
 from limpieza import obtener_datos_limpios
 
 df_games, df_anime, df_comics = obtener_datos_limpios()
@@ -65,12 +69,16 @@ def generar_vocabulario_tags(df_stands):
 if __name__ == "__main__":
     df_stands = generar_stands()
     df_tags = generar_vocabulario_tags(df_stands)
+    df_stands.dropna(how='all')
 
+    
+
+        
+        
+        
     print(f"Stands generados: {len(df_stands)}")
-    print(df_stands)    
+    print(df_stands)
+
     print(f"Tags en vocabulario: {len(df_tags)}")
     df_tags = df_tags.sort_values(by='frecuencia', ascending=False)
     print(df_tags)
-
-    #print(pd.concat([df_stands['tags'], df_tags.rename(columns={"origenes": "tag", "_id": "tags"})])   )
-    #print(pd.concat([df_stands['tags'], df_tags['_id']], axis=1), end='NaN')

@@ -37,3 +37,5 @@ def obtener_datos_limpios():
     df_comics['dominio'] = 'manga_comic'
 
     return df_games, df_anime, df_comics
+
+
