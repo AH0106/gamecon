@@ -1,5 +1,7 @@
 import pandas as pd
-from limpieza import df_games, df_anime, df_comics
+from limpieza import obtener_datos_limpios
+
+df_games, df_anime, df_comics = obtener_datos_limpios()
 
 def generar_stands():
     stands = []
@@ -70,5 +72,5 @@ if __name__ == "__main__":
     df_tags = df_tags.sort_values(by='frecuencia', ascending=False)
     print(df_tags)
 
-    print(pd.concat([df_stands['tags'], df_tags.rename(columns={"origenes": "tag", "_id": "tags"})])   )
-    print(pd.concat([df_stands['tags'], df_tags['_id']], axis=1), end='NaN')
+    #print(pd.concat([df_stands['tags'], df_tags.rename(columns={"origenes": "tag", "_id": "tags"})])   )
+    #print(pd.concat([df_stands['tags'], df_tags['_id']], axis=1), end='NaN')

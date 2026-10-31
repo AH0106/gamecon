@@ -5,7 +5,7 @@ datos/processed/
 *.json
 *.gz
 *.zip
-venv/
+.venv/
 __pycache__/
-.env
+env/
 .DS_Store

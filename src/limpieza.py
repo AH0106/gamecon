@@ -1,4 +1,5 @@
-import pandas as pd
+from locale import D_FMT
+
 from perfilar import cargar_datos_raw
 
 def obtener_datos_limpios():
@@ -24,7 +25,7 @@ def obtener_datos_limpios():
     # 3. Cómics
     df_comics = df_comics.copy().drop_duplicates(subset=['book_id'])
     cols_a_borrar_comics = [
-        'text_reviews_count', 'series', 'language_code', 'popular_shelves', 'asin', 
+        'text_reviews_count', 'series', 'language_code', 'asin', 
         'is_ebook', 'kindle_asin', 'format', 'link', 'authors', 'num_pages', 
         'publication_day', 'isbn13', 'publication_month', 'edition_information', 
         'publication_year', 'url', 'image_url', 'work_id', 'title_without_series'
@@ -36,6 +37,3 @@ def obtener_datos_limpios():
     df_comics['dominio'] = 'manga_comic'
 
     return df_games, df_anime, df_comics
-
-# Para importar directamente
-df_games, df_anime, df_comics = obtener_datos_limpios()
