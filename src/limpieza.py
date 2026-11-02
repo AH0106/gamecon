@@ -1,5 +1,3 @@
-from locale import D_FMT
-
 from perfilar import cargar_datos_raw
 
 def obtener_datos_limpios():
@@ -39,3 +37,19 @@ def obtener_datos_limpios():
     return df_games, df_anime, df_comics
 
 
+def vacio_a_nulo(column):
+    if column is None:
+        return None
+
+    limpio = column.astype("string").str.strip()
+    basura = {"", "nan", "none", "misc", "null", "n/a", "-"}
+    
+    return limpio.mask(limpio.str.lower().isin(basura))
+
+
+
+
+def quitar_tildes(x):
+    if x != str(x):        
+        return x
+    x = x.replace("á", "a").replace("é", "e").replace("í", "i").replace("ó", "o").replace("ú", "u")
