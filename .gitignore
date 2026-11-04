@@ -1,6 +1,7 @@
 datos/raw/
 datos/interim/
 datos/processed/
+skills/system/run-workflow
 *.csv
 *.json
 *.gz
