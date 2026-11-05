@@ -3,14 +3,17 @@ from limpieza import obtener_datos_limpios
 
 df_games, df_anime, df_comics = obtener_datos_limpios()
 
+def normalizar(tag):
+    return str(tag).strip().lower().replace(" ", "_")
+
 def generar_stands(df_games, df_anime, df_comics):
     stands = []
 
     # 1. Procesar Juegos (Publisher -> Stand)
     for productor, group in df_games.groupby('productor'):
         generos = [
-            str(g).strip() for g in group['genero'].dropna().unique() 
-            if pd.notna(g) and str(g).strip() not in ['Misc', 'nan', '']
+            normalizar(g) for g in group['genero'].dropna().unique() 
+            if pd.notna(g) and str(g).strip().lower() not in ['misc', 'nan', '']
         ]
         stands.append({
             "nombre": str(productor),
@@ -24,8 +27,8 @@ def generar_stands(df_games, df_anime, df_comics):
         raw_series = group['genero'].dropna().astype(str)
         raw_exploded = raw_series.str.split(',').explode().astype(str).str.strip()
         generos = [
-            g for g in raw_exploded.unique() 
-            if g and g.lower() not in ['nan', 'none', 'misc']
+            normalizar(g) for g in raw_exploded.unique() 
+            if g and g.lower() not in ['nan', 'none', 'misc', '']
         ]
         stands.append({
             "nombre": str(productor),
@@ -40,7 +43,7 @@ def generar_stands(df_games, df_anime, df_comics):
             "nombre": str(productor),
             "dominio": "manga_comic",
             "ubicacion": f"Zona Comics - Stand {len(stands) + 1}",
-            "tags": ["Comic/Manga"]
+            "tags": ["comic/manga"]
         })
 
     return pd.DataFrame(stands)
@@ -52,7 +55,7 @@ def generar_vocabulario_tags(df_stands):
     for tag in todos_los_tags:
         frecuencia = sum(1 for tags_list in df_stands['tags'] if tag in tags_list)
         vocabulario.append({
-            "_id": tag.lower().replace(" ", "_"),
+            "_id": tag,
             "nivel": "general" if frecuencia > 10 else "especifico",
             "origenes": [tag],
             "frecuencia": frecuencia
