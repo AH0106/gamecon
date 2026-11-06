@@ -1,7 +1,6 @@
 import pandas as pd
 from limpieza import obtener_datos_limpios
 
-df_games, df_anime, df_comics = obtener_datos_limpios()
 
 def normalizar(tag):
     return str(tag).strip().lower().replace(" ", "_")
@@ -66,6 +65,9 @@ def generar_vocabulario_tags(df_stands):
 
 
 if __name__ == "__main__":
+
+    df_games, df_anime, df_comics = obtener_datos_limpios()
+
     df_stands = generar_stands(df_games, df_anime, df_comics)
     df_tags = generar_vocabulario_tags(df_stands)
     df_stands.dropna(how='all')
