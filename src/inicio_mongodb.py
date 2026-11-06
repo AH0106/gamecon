@@ -4,7 +4,7 @@ from pathlib import Path
 import os
 
 RAIZ = Path(__file__).resolve().parent.parent
-load_dotenv(RAIZ / ".env")
+load_dotenv(dotenv_path=RAIZ / ".env")
 
 MONGO_URI = os.getenv("MONGO_URI", "mongodb://localhost:27017/")
 client = MongoClient(MONGO_URI)
