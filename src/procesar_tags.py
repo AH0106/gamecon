@@ -12,7 +12,7 @@ def generar_stands(df_games, df_anime, df_comics):
     # 1. Procesar Juegos (Publisher -> Stand)
     for productor, group in df_games.groupby('productor'):
         generos = [
-            normalizar(g) for g in group['genero'].dropna().unique() 
+            normalizar(g) for g in group['genero'].dropna().unique()
             if pd.notna(g) and str(g).strip().lower() not in ['misc', 'nan', '']
         ]
         stands.append({
@@ -27,7 +27,7 @@ def generar_stands(df_games, df_anime, df_comics):
         raw_series = group['genero'].dropna().astype(str)
         raw_exploded = raw_series.str.split(',').explode().astype(str).str.strip()
         generos = [
-            normalizar(g) for g in raw_exploded.unique() 
+            normalizar(g) for g in raw_exploded.unique()
             if g and g.lower() not in ['nan', 'none', 'misc', '']
         ]
         stands.append({
@@ -50,7 +50,7 @@ def generar_stands(df_games, df_anime, df_comics):
 
 def generar_vocabulario_tags(df_stands):
     todos_los_tags = set(tag for tags_list in df_stands['tags'] for tag in tags_list)
-    
+
     vocabulario = []
     for tag in todos_los_tags:
         frecuencia = sum(1 for tags_list in df_stands['tags'] if tag in tags_list)
@@ -70,7 +70,7 @@ if __name__ == "__main__":
     df_tags = generar_vocabulario_tags(df_stands)
     df_stands.dropna(how='all')
 
-            
+
     print(f"Stands generados: {len(df_stands)}")
     print(df_stands)
 
