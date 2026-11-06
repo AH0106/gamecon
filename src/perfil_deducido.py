@@ -1,8 +1,13 @@
 from pymongo import MongoClient
+from dotenv import load_dotenv
+from pathlib import Path
 import os
 
-client = MongoClient(os.getenv("MONGO_URI", "mongodb://localhost:27017/")) #se cambia cuando tengamos la base
-db = client["gamecon_db"]
+RAIZ = Path(__file__).resolve().parent.parent
+load_dotenv(RAIZ / ".env")
+
+client = MongoClient(os.getenv("MONGO_URI", "mongodb://localhost:27017/"))
+db = client[os.getenv("MONGO_DB", "GameCon")]
 
 def registrar_interaccion(asistente_id, objetivo_id, tipo_interaccion, tags_objetivo):
     """Registra una interacción y actualiza el perfil deducido del asistente."""
@@ -12,7 +17,7 @@ def registrar_interaccion(asistente_id, objetivo_id, tipo_interaccion, tags_obje
         "objetivo_id": objetivo_id,
         "tipo": tipo_interaccion
     })
-    
+
     #actualizar el perfil deducido
     peso = 2 if tipo_interaccion == "favorito" else 1
     for tag in tags_objetivo:
