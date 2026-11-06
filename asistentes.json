@@ -1,0 +1,1002 @@
+[
+    {
+        "_id": "ASIS_0001",
+        "nombre": "Ricardo Mellado Olivares",
+        "intereses_declarados": [
+            "mystery",
+            "racing",
+            "role-playing"
+        ],
+        "intereses_deducidos": {}
+    },
+    {
+        "_id": "ASIS_0002",
+        "nombre": "Blanca Antonella Labra Soto",
+        "intereses_declarados": [
+            "sci-fi",
+            "action",
+            "suspense"
+        ],
+        "intereses_deducidos": {}
+    },
+    {
+        "_id": "ASIS_0003",
+        "nombre": "Almendra Alicia Echeverría Ávalos",
+        "intereses_declarados": [
+            "mecha",
+            "psychological",
+            "action"
+        ],
+        "intereses_deducidos": {}
+    },
+    {
+        "_id": "ASIS_0004",
+        "nombre": "María Anna Valdivia González",
+        "intereses_declarados": [
+            "sports",
+            "racing",
+            "slice_of_life"
+        ],
+        "intereses_deducidos": {}
+    },
+    {
+        "_id": "ASIS_0005",
+        "nombre": "Matías Alexander Soto Navarrete",
+        "intereses_declarados": [
+            "psychological",
+            "supernatural",
+            "drama"
+        ],
+        "intereses_deducidos": {}
+    },
+    {
+        "_id": "ASIS_0006",
+        "nombre": "Vicente Jorge González Córdova",
+        "intereses_declarados": [
+            "comedy",
+            "slice_of_life",
+            "isekai"
+        ],
+        "intereses_deducidos": {}
+    },
+    {
+        "_id": "ASIS_0007",
+        "nombre": "Florencia Thiare Navarro Muñoz",
+        "intereses_declarados": [
+            "mecha",
+            "mystery",
+            "role-playing"
+        ],
+        "intereses_deducidos": {}
+    },
+    {
+        "_id": "ASIS_0008",
+        "nombre": "Julio Arteaga",
+        "intereses_declarados": [
+            "action",
+            "sports",
+            "slice_of_life"
+        ],
+        "intereses_deducidos": {}
+    },
+    {
+        "_id": "ASIS_0009",
+        "nombre": "Juana Mariana Acevedo Vargas",
+        "intereses_declarados": [
+            "adventure",
+            "racing",
+            "mystery"
+        ],
+        "intereses_deducidos": {}
+    },
+    {
+        "_id": "ASIS_0010",
+        "nombre": "Miguel Harold Muñoz Ponce",
+        "intereses_declarados": [
+            "isekai",
+            "action",
+            "supernatural"
+        ],
+        "intereses_deducidos": {}
+    },
+    {
+        "_id": "ASIS_0011",
+        "nombre": "Fabián Montecinos-Riffo Fernández",
+        "intereses_declarados": [
+            "shooter",
+            "psychological",
+            "adventure"
+        ],
+        "intereses_deducidos": {}
+    },
+    {
+        "_id": "ASIS_0012",
+        "nombre": "Ariel Christian González Núñez",
+        "intereses_declarados": [
+            "horror",
+            "isekai",
+            "mecha"
+        ],
+        "intereses_deducidos": {}
+    },
+    {
+        "_id": "ASIS_0013",
+        "nombre": "Lucas Carlos Inostroza Gutiérrez",
+        "intereses_declarados": [
+            "supernatural",
+            "romance",
+            "suspense"
+        ],
+        "intereses_deducidos": {}
+    },
+    {
+        "_id": "ASIS_0014",
+        "nombre": "Pía Mella-Mora",
+        "intereses_declarados": [
+            "slice_of_life",
+            "drama",
+            "comedy"
+        ],
+        "intereses_deducidos": {}
+    },
+    {
+        "_id": "ASIS_0015",
+        "nombre": "Rita Toledo",
+        "intereses_declarados": [
+            "comedy",
+            "sports",
+            "romance"
+        ],
+        "intereses_deducidos": {}
+    },
+    {
+        "_id": "ASIS_0016",
+        "nombre": "Paz Romina Ramírez García",
+        "intereses_declarados": [
+            "suspense",
+            "sci-fi",
+            "action"
+        ],
+        "intereses_deducidos": {}
+    },
+    {
+        "_id": "ASIS_0017",
+        "nombre": "José Jorge Mercado Cortés",
+        "intereses_declarados": [
+            "action",
+            "supernatural",
+            "sci-fi"
+        ],
+        "intereses_deducidos": {}
+    },
+    {
+        "_id": "ASIS_0018",
+        "nombre": "Antonio Durán Martínez",
+        "intereses_declarados": [
+            "racing",
+            "mystery",
+            "fantasy"
+        ],
+        "intereses_deducidos": {}
+    },
+    {
+        "_id": "ASIS_0019",
+        "nombre": "Clemente Núñez",
+        "intereses_declarados": [
+            "adventure",
+            "strategy",
+            "romance"
+        ],
+        "intereses_deducidos": {}
+    },
+    {
+        "_id": "ASIS_0020",
+        "nombre": "Laura Ahumada",
+        "intereses_declarados": [
+            "action",
+            "mystery",
+            "isekai"
+        ],
+        "intereses_deducidos": {}
+    },
+    {
+        "_id": "ASIS_0021",
+        "nombre": "Cristóbal González",
+        "intereses_declarados": [
+            "horror",
+            "fantasy",
+            "mecha"
+        ],
+        "intereses_deducidos": {}
+    },
+    {
+        "_id": "ASIS_0022",
+        "nombre": "Millaray Vega",
+        "intereses_declarados": [
+            "isekai",
+            "horror",
+            "psychological"
+        ],
+        "intereses_deducidos": {}
+    },
+    {
+        "_id": "ASIS_0023",
+        "nombre": "Juan Ernesto Ríos González",
+        "intereses_declarados": [
+            "sci-fi",
+            "role-playing",
+            "adventure"
+        ],
+        "intereses_deducidos": {}
+    },
+    {
+        "_id": "ASIS_0024",
+        "nombre": "Ricardo Retamal",
+        "intereses_declarados": [
+            "slice_of_life",
+            "role-playing",
+            "horror"
+        ],
+        "intereses_deducidos": {}
+    },
+    {
+        "_id": "ASIS_0025",
+        "nombre": "Ema Muñoz",
+        "intereses_declarados": [
+            "comedy",
+            "racing",
+            "sports"
+        ],
+        "intereses_deducidos": {}
+    },
+    {
+        "_id": "ASIS_0026",
+        "nombre": "Cristian Navarro Avilés",
+        "intereses_declarados": [
+            "racing",
+            "isekai",
+            "shooter"
+        ],
+        "intereses_deducidos": {}
+    },
+    {
+        "_id": "ASIS_0027",
+        "nombre": "Sebastián Santiago Droguett Valdivia",
+        "intereses_declarados": [
+            "fantasy",
+            "slice_of_life",
+            "romance"
+        ],
+        "intereses_deducidos": {}
+    },
+    {
+        "_id": "ASIS_0028",
+        "nombre": "José Rodrigo Vivanco Medina",
+        "intereses_declarados": [
+            "horror",
+            "strategy",
+            "mystery"
+        ],
+        "intereses_deducidos": {}
+    },
+    {
+        "_id": "ASIS_0029",
+        "nombre": "Andrés Bastián Silva Jaque",
+        "intereses_declarados": [
+            "adventure",
+            "supernatural",
+            "psychological"
+        ],
+        "intereses_deducidos": {}
+    },
+    {
+        "_id": "ASIS_0030",
+        "nombre": "Guillermo Felipe Castro Sánchez",
+        "intereses_declarados": [
+            "supernatural",
+            "suspense",
+            "sci-fi"
+        ],
+        "intereses_deducidos": {}
+    },
+    {
+        "_id": "ASIS_0031",
+        "nombre": "René Rubén Díaz Tapia",
+        "intereses_declarados": [
+            "action",
+            "adventure",
+            "racing"
+        ],
+        "intereses_deducidos": {}
+    },
+    {
+        "_id": "ASIS_0032",
+        "nombre": "Camila Aguilar González",
+        "intereses_declarados": [
+            "supernatural",
+            "sci-fi",
+            "strategy"
+        ],
+        "intereses_deducidos": {}
+    },
+    {
+        "_id": "ASIS_0033",
+        "nombre": "Víctor González",
+        "intereses_declarados": [
+            "racing",
+            "drama",
+            "supernatural"
+        ],
+        "intereses_deducidos": {}
+    },
+    {
+        "_id": "ASIS_0034",
+        "nombre": "Gladys Mellado Acuña",
+        "intereses_declarados": [
+            "psychological",
+            "mystery",
+            "fantasy"
+        ],
+        "intereses_deducidos": {}
+    },
+    {
+        "_id": "ASIS_0035",
+        "nombre": "Iván Ricardo Díaz Castro",
+        "intereses_declarados": [
+            "adventure",
+            "comedy",
+            "mystery"
+        ],
+        "intereses_deducidos": {}
+    },
+    {
+        "_id": "ASIS_0036",
+        "nombre": "Catalina Natalia Bustos-Córdova González",
+        "intereses_declarados": [
+            "romance",
+            "drama",
+            "mecha"
+        ],
+        "intereses_deducidos": {}
+    },
+    {
+        "_id": "ASIS_0037",
+        "nombre": "María Evelyn Osorio Sáez",
+        "intereses_declarados": [
+            "isekai",
+            "shooter",
+            "role-playing"
+        ],
+        "intereses_deducidos": {}
+    },
+    {
+        "_id": "ASIS_0038",
+        "nombre": "Elsa González",
+        "intereses_declarados": [
+            "fantasy",
+            "action",
+            "strategy"
+        ],
+        "intereses_deducidos": {}
+    },
+    {
+        "_id": "ASIS_0039",
+        "nombre": "Valeria Pamela Figueroa Segura",
+        "intereses_declarados": [
+            "drama",
+            "horror",
+            "sports"
+        ],
+        "intereses_deducidos": {}
+    },
+    {
+        "_id": "ASIS_0040",
+        "nombre": "Aníbal Carlos Barraza Montecino",
+        "intereses_declarados": [
+            "shooter",
+            "mystery",
+            "mecha"
+        ],
+        "intereses_deducidos": {}
+    },
+    {
+        "_id": "ASIS_0041",
+        "nombre": "Ruth Valderrama",
+        "intereses_declarados": [
+            "slice_of_life",
+            "horror",
+            "sci-fi"
+        ],
+        "intereses_deducidos": {}
+    },
+    {
+        "_id": "ASIS_0042",
+        "nombre": "Constanza Marlene Caro Cisternas",
+        "intereses_declarados": [
+            "supernatural",
+            "isekai",
+            "sports"
+        ],
+        "intereses_deducidos": {}
+    },
+    {
+        "_id": "ASIS_0043",
+        "nombre": "Cristopher Muñoz Escalona",
+        "intereses_declarados": [
+            "psychological",
+            "drama",
+            "sports"
+        ],
+        "intereses_deducidos": {}
+    },
+    {
+        "_id": "ASIS_0044",
+        "nombre": "Lorenzo Álvarez Herrera",
+        "intereses_declarados": [
+            "mecha",
+            "suspense",
+            "romance"
+        ],
+        "intereses_deducidos": {}
+    },
+    {
+        "_id": "ASIS_0045",
+        "nombre": "Monica Carolina Baeza Cortés",
+        "intereses_declarados": [
+            "mecha",
+            "strategy",
+            "suspense"
+        ],
+        "intereses_deducidos": {}
+    },
+    {
+        "_id": "ASIS_0046",
+        "nombre": "Juana Torres",
+        "intereses_declarados": [
+            "sci-fi",
+            "strategy",
+            "adventure"
+        ],
+        "intereses_deducidos": {}
+    },
+    {
+        "_id": "ASIS_0047",
+        "nombre": "Juan Sebastián Contreras López",
+        "intereses_declarados": [
+            "racing",
+            "isekai",
+            "mecha"
+        ],
+        "intereses_deducidos": {}
+    },
+    {
+        "_id": "ASIS_0048",
+        "nombre": "Fernando Camilo Arévalo Pavez",
+        "intereses_declarados": [
+            "psychological",
+            "sports",
+            "supernatural"
+        ],
+        "intereses_deducidos": {}
+    },
+    {
+        "_id": "ASIS_0049",
+        "nombre": "Matías José Martínez Ramírez",
+        "intereses_declarados": [
+            "isekai",
+            "romance",
+            "fantasy"
+        ],
+        "intereses_deducidos": {}
+    },
+    {
+        "_id": "ASIS_0050",
+        "nombre": "Ramon Suazo Henríquez",
+        "intereses_declarados": [
+            "fantasy",
+            "mecha",
+            "isekai"
+        ],
+        "intereses_deducidos": {}
+    },
+    {
+        "_id": "ASIS_0051",
+        "nombre": "Maicol Suazo",
+        "intereses_declarados": [
+            "mecha",
+            "role-playing",
+            "mystery"
+        ],
+        "intereses_deducidos": {}
+    },
+    {
+        "_id": "ASIS_0052",
+        "nombre": "Pedro Pinto Ávila",
+        "intereses_declarados": [
+            "sci-fi",
+            "sports",
+            "comedy"
+        ],
+        "intereses_deducidos": {}
+    },
+    {
+        "_id": "ASIS_0053",
+        "nombre": "Bárbara Arcos Montenegro",
+        "intereses_declarados": [
+            "mystery",
+            "strategy",
+            "role-playing"
+        ],
+        "intereses_deducidos": {}
+    },
+    {
+        "_id": "ASIS_0054",
+        "nombre": "Miguel Diego Castillo Cortés",
+        "intereses_declarados": [
+            "mystery",
+            "fantasy",
+            "strategy"
+        ],
+        "intereses_deducidos": {}
+    },
+    {
+        "_id": "ASIS_0055",
+        "nombre": "Liliana Elsa Ávila Carvajal",
+        "intereses_declarados": [
+            "sports",
+            "drama",
+            "suspense"
+        ],
+        "intereses_deducidos": {}
+    },
+    {
+        "_id": "ASIS_0056",
+        "nombre": "Pablo Teodoro Contreras Miranda",
+        "intereses_declarados": [
+            "strategy",
+            "slice_of_life",
+            "racing"
+        ],
+        "intereses_deducidos": {}
+    },
+    {
+        "_id": "ASIS_0057",
+        "nombre": "Ignacio Danny Muñoz Torres",
+        "intereses_declarados": [
+            "racing",
+            "strategy",
+            "shooter"
+        ],
+        "intereses_deducidos": {}
+    },
+    {
+        "_id": "ASIS_0058",
+        "nombre": "Alan Alex Carreño Valdivia",
+        "intereses_declarados": [
+            "isekai",
+            "slice_of_life",
+            "drama"
+        ],
+        "intereses_deducidos": {}
+    },
+    {
+        "_id": "ASIS_0059",
+        "nombre": "Ruth Scarlet Vilches Aguilar",
+        "intereses_declarados": [
+            "psychological",
+            "strategy",
+            "mystery"
+        ],
+        "intereses_deducidos": {}
+    },
+    {
+        "_id": "ASIS_0060",
+        "nombre": "Marta Vergara",
+        "intereses_declarados": [
+            "isekai",
+            "drama",
+            "adventure"
+        ],
+        "intereses_deducidos": {}
+    },
+    {
+        "_id": "ASIS_0061",
+        "nombre": "Angelo Mario Valencia González",
+        "intereses_declarados": [
+            "action",
+            "sci-fi",
+            "isekai"
+        ],
+        "intereses_deducidos": {}
+    },
+    {
+        "_id": "ASIS_0062",
+        "nombre": "Camila María Uribe Cubillos",
+        "intereses_declarados": [
+            "sci-fi",
+            "role-playing",
+            "horror"
+        ],
+        "intereses_deducidos": {}
+    },
+    {
+        "_id": "ASIS_0063",
+        "nombre": "Alex Fuentes Aránguiz",
+        "intereses_declarados": [
+            "romance",
+            "drama",
+            "supernatural"
+        ],
+        "intereses_deducidos": {}
+    },
+    {
+        "_id": "ASIS_0064",
+        "nombre": "Giovanni Sánchez Núñez",
+        "intereses_declarados": [
+            "fantasy",
+            "comedy",
+            "racing"
+        ],
+        "intereses_deducidos": {}
+    },
+    {
+        "_id": "ASIS_0065",
+        "nombre": "María Bahamonde",
+        "intereses_declarados": [
+            "horror",
+            "role-playing",
+            "comedy"
+        ],
+        "intereses_deducidos": {}
+    },
+    {
+        "_id": "ASIS_0066",
+        "nombre": "Mariana Estefanía Mendoza Pérez",
+        "intereses_declarados": [
+            "drama",
+            "comedy",
+            "action"
+        ],
+        "intereses_deducidos": {}
+    },
+    {
+        "_id": "ASIS_0067",
+        "nombre": "Mía Marina Guerrero González",
+        "intereses_declarados": [
+            "isekai",
+            "adventure",
+            "strategy"
+        ],
+        "intereses_deducidos": {}
+    },
+    {
+        "_id": "ASIS_0068",
+        "nombre": "Sara Aguilera Valenzuela",
+        "intereses_declarados": [
+            "psychological",
+            "suspense",
+            "mystery"
+        ],
+        "intereses_deducidos": {}
+    },
+    {
+        "_id": "ASIS_0069",
+        "nombre": "Celia María Oñate Díaz",
+        "intereses_declarados": [
+            "mystery",
+            "slice_of_life",
+            "mecha"
+        ],
+        "intereses_deducidos": {}
+    },
+    {
+        "_id": "ASIS_0070",
+        "nombre": "Luis Raúl Espinoza Rivera",
+        "intereses_declarados": [
+            "fantasy",
+            "racing",
+            "romance"
+        ],
+        "intereses_deducidos": {}
+    },
+    {
+        "_id": "ASIS_0071",
+        "nombre": "Máximo Aros Ferrada",
+        "intereses_declarados": [
+            "horror",
+            "slice_of_life",
+            "comedy"
+        ],
+        "intereses_deducidos": {}
+    },
+    {
+        "_id": "ASIS_0072",
+        "nombre": "Octavio Lorenzo Rojas Pérez",
+        "intereses_declarados": [
+            "isekai",
+            "fantasy",
+            "comedy"
+        ],
+        "intereses_deducidos": {}
+    },
+    {
+        "_id": "ASIS_0073",
+        "nombre": "Pedro Catalán Rubio",
+        "intereses_declarados": [
+            "slice_of_life",
+            "romance",
+            "supernatural"
+        ],
+        "intereses_deducidos": {}
+    },
+    {
+        "_id": "ASIS_0074",
+        "nombre": "Guillermo José Sánchez Pinto",
+        "intereses_declarados": [
+            "racing",
+            "supernatural",
+            "suspense"
+        ],
+        "intereses_deducidos": {}
+    },
+    {
+        "_id": "ASIS_0075",
+        "nombre": "Fernanda Vega Ramírez",
+        "intereses_declarados": [
+            "fantasy",
+            "suspense",
+            "isekai"
+        ],
+        "intereses_deducidos": {}
+    },
+    {
+        "_id": "ASIS_0076",
+        "nombre": "Ramon Tránsito De La Fuente Vallejos",
+        "intereses_declarados": [
+            "mystery",
+            "shooter",
+            "racing"
+        ],
+        "intereses_deducidos": {}
+    },
+    {
+        "_id": "ASIS_0077",
+        "nombre": "Vicente Gómez",
+        "intereses_declarados": [
+            "mecha",
+            "horror",
+            "role-playing"
+        ],
+        "intereses_deducidos": {}
+    },
+    {
+        "_id": "ASIS_0078",
+        "nombre": "Hugo Víctor Sandoval Navarrete",
+        "intereses_declarados": [
+            "strategy",
+            "shooter",
+            "romance"
+        ],
+        "intereses_deducidos": {}
+    },
+    {
+        "_id": "ASIS_0079",
+        "nombre": "Rosa Antonia Acevedo Vargas",
+        "intereses_declarados": [
+            "role-playing",
+            "isekai",
+            "adventure"
+        ],
+        "intereses_deducidos": {}
+    },
+    {
+        "_id": "ASIS_0080",
+        "nombre": "Roberto Marcelo Flores Candia",
+        "intereses_declarados": [
+            "strategy",
+            "comedy",
+            "horror"
+        ],
+        "intereses_deducidos": {}
+    },
+    {
+        "_id": "ASIS_0081",
+        "nombre": "Edith Andrea Matamala Parraguez",
+        "intereses_declarados": [
+            "role-playing",
+            "psychological",
+            "racing"
+        ],
+        "intereses_deducidos": {}
+    },
+    {
+        "_id": "ASIS_0082",
+        "nombre": "Herminda Bravo Salinas",
+        "intereses_declarados": [
+            "horror",
+            "suspense",
+            "romance"
+        ],
+        "intereses_deducidos": {}
+    },
+    {
+        "_id": "ASIS_0083",
+        "nombre": "Florinda Alicia Suárez Quezada",
+        "intereses_declarados": [
+            "psychological",
+            "role-playing",
+            "suspense"
+        ],
+        "intereses_deducidos": {}
+    },
+    {
+        "_id": "ASIS_0084",
+        "nombre": "María Tapia Núñez",
+        "intereses_declarados": [
+            "racing",
+            "shooter",
+            "fantasy"
+        ],
+        "intereses_deducidos": {}
+    },
+    {
+        "_id": "ASIS_0085",
+        "nombre": "Raúl Espinoza Venegas",
+        "intereses_declarados": [
+            "supernatural",
+            "sports",
+            "role-playing"
+        ],
+        "intereses_deducidos": {}
+    },
+    {
+        "_id": "ASIS_0086",
+        "nombre": "Catalina Pérez Araya",
+        "intereses_declarados": [
+            "action",
+            "sports",
+            "shooter"
+        ],
+        "intereses_deducidos": {}
+    },
+    {
+        "_id": "ASIS_0087",
+        "nombre": "Jairo Sandoval Pérez",
+        "intereses_declarados": [
+            "isekai",
+            "romance",
+            "drama"
+        ],
+        "intereses_deducidos": {}
+    },
+    {
+        "_id": "ASIS_0088",
+        "nombre": "Felipe Peña",
+        "intereses_declarados": [
+            "adventure",
+            "romance",
+            "mystery"
+        ],
+        "intereses_deducidos": {}
+    },
+    {
+        "_id": "ASIS_0089",
+        "nombre": "Álvaro Carlos Vega Paredes",
+        "intereses_declarados": [
+            "sci-fi",
+            "racing",
+            "fantasy"
+        ],
+        "intereses_deducidos": {}
+    },
+    {
+        "_id": "ASIS_0090",
+        "nombre": "Mirta Medina",
+        "intereses_declarados": [
+            "racing",
+            "role-playing",
+            "adventure"
+        ],
+        "intereses_deducidos": {}
+    },
+    {
+        "_id": "ASIS_0091",
+        "nombre": "Isabel Pía Morales Vera",
+        "intereses_declarados": [
+            "slice_of_life",
+            "psychological",
+            "sports"
+        ],
+        "intereses_deducidos": {}
+    },
+    {
+        "_id": "ASIS_0092",
+        "nombre": "Sebastián José Martínez Rojas",
+        "intereses_declarados": [
+            "role-playing",
+            "supernatural",
+            "shooter"
+        ],
+        "intereses_deducidos": {}
+    },
+    {
+        "_id": "ASIS_0093",
+        "nombre": "Pamela María Saavedra Jara",
+        "intereses_declarados": [
+            "strategy",
+            "isekai",
+            "fantasy"
+        ],
+        "intereses_deducidos": {}
+    },
+    {
+        "_id": "ASIS_0094",
+        "nombre": "Fernando Felipe Ortega Barrera",
+        "intereses_declarados": [
+            "fantasy",
+            "isekai",
+            "suspense"
+        ],
+        "intereses_deducidos": {}
+    },
+    {
+        "_id": "ASIS_0095",
+        "nombre": "Martín Dilan Madariaga Núñez",
+        "intereses_declarados": [
+            "shooter",
+            "sports",
+            "racing"
+        ],
+        "intereses_deducidos": {}
+    },
+    {
+        "_id": "ASIS_0096",
+        "nombre": "Nicanor José Olguín Burgos",
+        "intereses_declarados": [
+            "isekai",
+            "shooter",
+            "drama"
+        ],
+        "intereses_deducidos": {}
+    },
+    {
+        "_id": "ASIS_0097",
+        "nombre": "Bianca Blanca Ormeño Villarroel",
+        "intereses_declarados": [
+            "horror",
+            "mystery",
+            "sci-fi"
+        ],
+        "intereses_deducidos": {}
+    },
+    {
+        "_id": "ASIS_0098",
+        "nombre": "Ignacio Castillo Ramírez",
+        "intereses_declarados": [
+            "sports",
+            "psychological",
+            "fantasy"
+        ],
+        "intereses_deducidos": {}
+    },
+    {
+        "_id": "ASIS_0099",
+        "nombre": "Rosa Elba Silva Ramírez",
+        "intereses_declarados": [
+            "isekai",
+            "mecha",
+            "action"
+        ],
+        "intereses_deducidos": {}
+    },
+    {
+        "_id": "ASIS_0100",
+        "nombre": "Luis Galleguillos",
+        "intereses_declarados": [
+            "comedy",
+            "supernatural",
+            "mystery"
+        ],
+        "intereses_deducidos": {}
+    }
+]
