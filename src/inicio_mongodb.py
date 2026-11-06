@@ -1,11 +1,16 @@
 from pymongo import MongoClient
+from dotenv import load_dotenv
+from pathlib import Path
 import os
 
-MONGO_URI = os.getenv("MONGO_URI", "mongodb://localhost:27017/") #crea variable para vincular el codigo con una base en mongo, aqui se debe cambiar cuando se cree el database en mongo
-client = MongoClient(MONGO_URI)                                  #se crea la conexion con la base de datos
-db = client["gamecon_db"]                                        #selecciona (o prepara para crear) la base de datos donde se trabajara
+RAIZ = Path(__file__).resolve().parent.parent
+load_dotenv(RAIZ / ".env")
 
-def inicializar_colecciones():                                                          
+MONGO_URI = os.getenv("MONGO_URI", "mongodb://localhost:27017/")
+client = MongoClient(MONGO_URI)
+db = client[os.getenv("MONGO_DB", "GameCon")]                                        #selecciona (o prepara para crear) la base de datos donde se trabajara
+
+def inicializar_colecciones():
     colecciones = ["tags", "stands", "presentaciones", "asistentes", "interacciones"]
     for col in colecciones:
         if col not in db.list_collection_names():

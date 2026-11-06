@@ -6,6 +6,10 @@ skills/system/run-workflow
 *.json
 *.gz
 *.zip
+.env
+*.env
+user.env
+venv/
 .venv/
 __pycache__/
 env/
