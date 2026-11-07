@@ -26,9 +26,9 @@ def obtener_datos_limpios():
         'text_reviews_count', 'series', 'language_code', 'asin', 
         'is_ebook', 'kindle_asin', 'format', 'link', 'authors', 'num_pages', 
         'publication_day', 'isbn13', 'publication_month', 'edition_information', 
-        'publication_year', 'url', 'image_url', 'work_id', 'title_without_series', 'country_code',
-        'isbn', 'average_rating', 'description','similar_books', 'rating_count"'
+        'publication_year', 'url', 'image_url', 'work_id', 'title_without_series', 'country_code', 'isbn', 'average_rating', 'description','similar_books', 'rating_count'
     ]
+    
     df_comics = df_comics.drop(columns=[c for c in cols_a_borrar_comics if c in df_comics.columns])
     df_comics = df_comics.rename(columns={'title': 'name', 'publisher': 'productor'})
     df_comics = df_comics.dropna(subset=['productor', 'name'])
@@ -37,7 +37,6 @@ def obtener_datos_limpios():
 
 
     return df_games, df_anime, df_comics
-
 
 
 
@@ -52,8 +51,9 @@ def vacio_a_nulo(column):
 
 
 
-
 def quitar_tildes(x):
     if x != str(x):        
         return x
     x = x.replace("á", "a").replace("é", "e").replace("í", "i").replace("ó", "o").replace("ú", "u")
+
+    return x
