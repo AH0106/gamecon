@@ -1,0 +1,262 @@
+[
+    {
+        "_id": "PRES_0001",
+        "titulo": "Speedrun: Cómo romper un juego en 20 minutos",
+        "dominio": "juegos",
+        "fecha": "08-11-2026",
+        "hora_inicio": "17:30",
+        "hora_termino": "19:00",
+        "tags": [
+            "isekai",
+            "shooter"
+        ],
+        "lugar": "Zona 7 - Sala de Cómics"
+    },
+    {
+        "_id": "PRES_0002",
+        "titulo": "Top 10 animes de la temporada",
+        "dominio": "anime",
+        "fecha": "08-11-2026",
+        "hora_inicio": "13:00",
+        "hora_termino": "13:30",
+        "tags": [
+            "supernatural",
+            "shooter"
+        ],
+        "lugar": "Zona 8 - Escenario Secundario"
+    },
+    {
+        "_id": "PRES_0003",
+        "titulo": "Historia del anime en los 90s",
+        "dominio": "anime",
+        "fecha": "08-11-2026",
+        "hora_inicio": "17:00",
+        "hora_termino": "17:30",
+        "tags": [
+            "slice_of_life",
+            "psychological"
+        ],
+        "lugar": "Zona 5 - Área de Música"
+    },
+    {
+        "_id": "PRES_0004",
+        "titulo": "Composición para videojuegos indie",
+        "dominio": "musica",
+        "fecha": "07-11-2026",
+        "hora_inicio": "15:30",
+        "hora_termino": "16:00",
+        "tags": [
+            "psychological",
+            "romance"
+        ],
+        "lugar": "Zona 7 - Sala de Cómics"
+    },
+    {
+        "_id": "PRES_0005",
+        "titulo": "Diseño de niveles en plataformas 2D",
+        "dominio": "juegos",
+        "fecha": "09-11-2026",
+        "hora_inicio": "17:30",
+        "hora_termino": "18:15",
+        "tags": [
+            "mecha",
+            "sports"
+        ],
+        "lugar": "Zona 7 - Sala de Cómics"
+    },
+    {
+        "_id": "PRES_0006",
+        "titulo": "Diseño de niveles en plataformas 2D",
+        "dominio": "juegos",
+        "fecha": "08-11-2026",
+        "hora_inicio": "14:30",
+        "hora_termino": "15:00",
+        "tags": [
+            "racing",
+            "fantasy"
+        ],
+        "lugar": "Zona 3 - Auditorio Anime"
+    },
+    {
+        "_id": "PRES_0007",
+        "titulo": "Creando tu primer juego en Unity",
+        "dominio": "juegos",
+        "fecha": "08-11-2026",
+        "hora_inicio": "12:00",
+        "hora_termino": "12:30",
+        "tags": [
+            "mecha",
+            "adventure"
+        ],
+        "lugar": "Zona 3 - Auditorio Anime"
+    },
+    {
+        "_id": "PRES_0008",
+        "titulo": "De manga a anime: el proceso de adaptación",
+        "dominio": "anime",
+        "fecha": "08-11-2026",
+        "hora_inicio": "14:00",
+        "hora_termino": "15:30",
+        "tags": [
+            "mystery",
+            "psychological"
+        ],
+        "lugar": "Zona 7 - Sala de Cómics"
+    },
+    {
+        "_id": "PRES_0009",
+        "titulo": "One Piece: análisis de 25 años",
+        "dominio": "manga",
+        "fecha": "09-11-2026",
+        "hora_inicio": "10:30",
+        "hora_termino": "11:15",
+        "tags": [
+            "suspense",
+            "comedy"
+        ],
+        "lugar": "Zona 6 - Taller Creativo"
+    },
+    {
+        "_id": "PRES_0010",
+        "titulo": "Historia del anime en los 90s",
+        "dominio": "anime",
+        "fecha": "07-11-2026",
+        "hora_inicio": "13:30",
+        "hora_termino": "15:00",
+        "tags": [
+            "horror",
+            "slice_of_life"
+        ],
+        "lugar": "Zona 2 - Sala de Charlas"
+    },
+    {
+        "_id": "PRES_0011",
+        "titulo": "De manga a anime: el proceso de adaptación",
+        "dominio": "anime",
+        "fecha": "09-11-2026",
+        "hora_inicio": "14:30",
+        "hora_termino": "15:30",
+        "tags": [
+            "sci-fi",
+            "mystery"
+        ],
+        "lugar": "Zona 2 - Sala de Charlas"
+    },
+    {
+        "_id": "PRES_0012",
+        "titulo": "Competitivo: Estrategias de alto nivel",
+        "dominio": "juegos",
+        "fecha": "08-11-2026",
+        "hora_inicio": "10:30",
+        "hora_termino": "11:15",
+        "tags": [
+            "slice_of_life",
+            "mystery"
+        ],
+        "lugar": "Zona 6 - Taller Creativo"
+    },
+    {
+        "_id": "PRES_0013",
+        "titulo": "Música en videojuegos: de 8-bits a orquestas",
+        "dominio": "musica",
+        "fecha": "09-11-2026",
+        "hora_inicio": "12:30",
+        "hora_termino": "14:00",
+        "tags": [
+            "romance",
+            "mystery"
+        ],
+        "lugar": "Zona 5 - Área de Música"
+    },
+    {
+        "_id": "PRES_0014",
+        "titulo": "One Piece: análisis de 25 años",
+        "dominio": "manga",
+        "fecha": "07-11-2026",
+        "hora_inicio": "15:00",
+        "hora_termino": "16:30",
+        "tags": [
+            "sports",
+            "strategy"
+        ],
+        "lugar": "Zona 2 - Sala de Charlas"
+    },
+    {
+        "_id": "PRES_0015",
+        "titulo": "Creando tu primer juego en Unity",
+        "dominio": "juegos",
+        "fecha": "08-11-2026",
+        "hora_inicio": "10:30",
+        "hora_termino": "11:15",
+        "tags": [
+            "isekai",
+            "sports"
+        ],
+        "lugar": "Zona 2 - Sala de Charlas"
+    },
+    {
+        "_id": "PRES_0016",
+        "titulo": "Los mejores villanos del anime",
+        "dominio": "anime",
+        "fecha": "09-11-2026",
+        "hora_inicio": "17:00",
+        "hora_termino": "18:30",
+        "tags": [
+            "mecha",
+            "adventure"
+        ],
+        "lugar": "Zona 8 - Escenario Secundario"
+    },
+    {
+        "_id": "PRES_0017",
+        "titulo": "De manga a anime: el proceso de adaptación",
+        "dominio": "anime",
+        "fecha": "07-11-2026",
+        "hora_inicio": "18:00",
+        "hora_termino": "19:30",
+        "tags": [
+            "sports",
+            "romance"
+        ],
+        "lugar": "Zona 4 - Sala de Juegos"
+    },
+    {
+        "_id": "PRES_0018",
+        "titulo": "Animación 2D vs 3D",
+        "dominio": "anime",
+        "fecha": "07-11-2026",
+        "hora_inicio": "11:30",
+        "hora_termino": "12:15",
+        "tags": [
+            "slice_of_life",
+            "adventure"
+        ],
+        "lugar": "Zona 7 - Sala de Cómics"
+    },
+    {
+        "_id": "PRES_0019",
+        "titulo": "DJ Set: Anime Openings",
+        "dominio": "musica",
+        "fecha": "09-11-2026",
+        "hora_inicio": "10:00",
+        "hora_termino": "10:45",
+        "tags": [
+            "horror",
+            "mystery"
+        ],
+        "lugar": "Zona 5 - Área de Música"
+    },
+    {
+        "_id": "PRES_0020",
+        "titulo": "Cómo publicar tu primer manga",
+        "dominio": "manga",
+        "fecha": "08-11-2026",
+        "hora_inicio": "11:30",
+        "hora_termino": "12:00",
+        "tags": [
+            "drama",
+            "horror"
+        ],
+        "lugar": "Zona 1 - Escenario Principal"
+    }
+]
