@@ -6,7 +6,8 @@ import os
 RAIZ = Path(__file__).resolve().parent.parent
 load_dotenv(dotenv_path=RAIZ / ".env")
 
-MONGO_URI = os.getenv("MONGO_URI", "mongodb://localhost:27017/")
+DEFAULT_URI = "mongodb+srv://cristobalcastro1_db_user:1234@cluster0.towey3r.mongodb.net/GameCon?retryWrites=true&w=majority"
+MONGO_URI = os.getenv("MONGO_URI", DEFAULT_URI)
 client = MongoClient(MONGO_URI)
 db = client[os.getenv("MONGO_DB", "GameCon")]                                        #selecciona (o prepara para crear) la base de datos donde se trabajara
 

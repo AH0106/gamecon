@@ -6,7 +6,8 @@ import os
 RAIZ = Path(__file__).resolve().parent.parent
 load_dotenv(RAIZ / ".env")
 
-client = MongoClient(os.getenv("MONGO_URI", "mongodb://localhost:27017/"))
+DEFAULT_URI = "mongodb+srv://cristobalcastro1_db_user:1234@cluster0.towey3r.mongodb.net/GameCon?retryWrites=true&w=majority"
+client = MongoClient(os.getenv("MONGO_URI", DEFAULT_URI))
 db = client[os.getenv("MONGO_DB", "GameCon")]
 
 def registrar_interaccion(asistente_id, objetivo_id, tipo_interaccion, tags_objetivo):
