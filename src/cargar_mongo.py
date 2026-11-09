@@ -10,6 +10,7 @@ load_dotenv(RAIZ / ".env")
 
 DEFAULT_URI = "mongodb+srv://cristobalcastro1_db_user:1234@cluster0.towey3r.mongodb.net/GameCon?retryWrites=true&w=majority"
 MONGO_URI = os.getenv("MONGO_URI", DEFAULT_URI)
+MONGO_DB = os.getenv("MONGO_DB", "GameCon")
 
 # Importar generadores de stands y tags
 import sys
@@ -19,9 +20,9 @@ from procesar_tags import generar_stands, generar_vocabulario_tags
 
 
 def cargar_datos_a_mongo():
-    print(f"Conectando a MongoDB ({MONGO_URI})...")
+    print(f"Conectando a MongoDB ({MONGO_DB})...")
     client = MongoClient(MONGO_URI)
-    db = client[MONGO_URI]
+    db = client[MONGO_DB]
 
     # 1. Obtener DataFrames limpios y procesados
     print("Generando stands y vocabulario desde los datasets...")
