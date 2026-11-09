@@ -16,7 +16,7 @@ def cargar_datos_raw():
     df_comics = pd.read_json(
         RAW / "goodreads_books_comics_graphic.json.gz",
         lines=True,
-        nrows=1000
+        nrows=10000
     )
     return df_games, df_anime, df_comics
 

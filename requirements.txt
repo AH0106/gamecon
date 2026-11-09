@@ -11,3 +11,4 @@ faker
 mongomock
 ipykernel
 ipython
+streamlit
