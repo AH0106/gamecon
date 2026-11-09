@@ -1,6 +1,7 @@
 import os
 import sys
 from pathlib import Path
+from typing import Any
 import streamlit as st
 from pymongo import MongoClient
 from dotenv import load_dotenv
@@ -52,7 +53,7 @@ total_stands = db.stands.count_documents({})
 st.sidebar.metric("Total Stands en BD", f"{total_stands:,}")
 
 # Obtener lista de todos los tags disponibles en la BD
-tags_disponibles = sorted(db.stands.distinct("tags"))
+tags_disponibles = sorted(t for t in db.stands.distinct("tags") if t)
 
 # Modo de búsqueda
 st.sidebar.divider()
