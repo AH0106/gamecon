@@ -1,53 +1,45 @@
+
 from pathlib import Path
-import os
+import pandas as pd
 import random
 import faker
-from dotenv import load_dotenv
-from pymongo import MongoClient
+
+#configuración inicial
+fake = faker.Faker('es_CL')  #genera nombres 
+NUM_USUARIOS = 100     #asistentes a simular
+
+#vocabulario controlado, se puede añadir mas si es necesario 
+tags_validos = [
+    "action", "adventure", "fantasy", "sci-fi", "horror", "mystery",
+    "romance", "slice_of_life", "sports", "supernatural", "suspense",
+    "isekai", "mecha", "psychological", "strategy", "role-playing",
+    "shooter", "racing", "comedy", "drama"
+]
+
+datos = []
+for i in range(1, NUM_USUARIOS + 1):
+    #id s
+    asistente_id = f"ASIS_{i:04d}"
+    
+    nombre = fake.name()
+    
+    #3 gustos unidos por coma para q se vea bien en un CSV
+    gustos_aleatorios = random.sample(tags_validos, 3)
+    gustos_declarados = ", ".join(gustos_aleatorios)
+    
+    datos.append({
+        "asistente_id": asistente_id,
+        "nombre": nombre,
+        "gustos_declarados": gustos_declarados
+    })
+
+#guardar como CSV
+df = pd.DataFrame(datos)
 
 RAIZ = Path(__file__).resolve().parent.parent
-load_dotenv(RAIZ / ".env")
+ruta_salida = RAIZ / "asistentes_simulados.csv"
+df.to_csv(ruta_salida, index=False, encoding="utf-8")
 
-DEFAULT_URI = "mongodb+srv://cristobalcastro1_db_user:1234@cluster0.towey3r.mongodb.net/GameCon?retryWrites=true&w=majority"
-
-NUM_USUARIOS = 100   # asistentes a simular
-GUSTOS_POR_ASISTENTE = 3
-SEMILLA = 42         # misma semilla -> mismos asistentes en cada corrida (reproducible)
-
-# Tags que NO se asignan a asistentes simulados (contenido adulto)
-EXCLUIR = {"hentai", "erotica"}
-
-
-def crear_asistentes():
-    random.seed(SEMILLA)
-    faker.Faker.seed(SEMILLA)
-    fake = faker.Faker("es_CL")
-
-    client = MongoClient(os.getenv("MONGO_URI", DEFAULT_URI))
-    db = client[os.getenv("MONGO_DB", "GameCon")]
-
-    # Los gustos salen del vocabulario controlado que generó el ETL (colección tags),
-    # así ningún asistente puede tener un gusto que no exista en algún stand.
-    tags_validos = sorted(t["_id"] for t in db.tags.find({}, {"_id": 1}) if t["_id"] not in EXCLUIR)
-    if len(tags_validos) < GUSTOS_POR_ASISTENTE:
-        raise SystemExit("La colección tags está vacía: corre primero cargar_mongo.py")
-
-    docs = []
-    for i in range(1, NUM_USUARIOS + 1):
-        docs.append({
-            "_id": f"ASIS_{i:04d}",
-            "nombre": fake.name(),
-            "intereses_declarados": random.sample(tags_validos, GUSTOS_POR_ASISTENTE),
-            "intereses_deducidos": {}
-        })
-
-    # Carga idempotente: vaciar y volver a insertar
-    db.asistentes.delete_many({})
-    db.asistentes.insert_many(docs)
-    print(f"-> {db.asistentes.count_documents({})} asistentes en MongoDB "
-          f"(gustos tomados de {len(tags_validos)} tags del vocabulario).")
-    print("Ejemplo:", docs[0])
-
-
-if __name__ == "__main__":
-    crear_asistentes()
+print(f"¡Éxito! Se generaron {NUM_USUARIOS} asistentes en: {ruta_salida}")
+print("\nVista previa de los datos:")
+print(df.head())
