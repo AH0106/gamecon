@@ -8,8 +8,7 @@ import pandas as pd
 RAIZ = Path(__file__).resolve().parent.parent
 load_dotenv(RAIZ / ".env")
 
-DEFAULT_URI = "mongodb+srv://cristobalcastro1_db_user:1234@cluster0.towey3r.mongodb.net/GameCon?retryWrites=true&w=majority"
-MONGO_URI = os.getenv("MONGO_URI", DEFAULT_URI)
+MONGO_URI = os.getenv("MONGO_URI", "mongodb://localhost:27017/")
 MONGO_DB = os.getenv("MONGO_DB", "GameCon")
 
 # Importar generadores de stands y tags
@@ -36,6 +35,9 @@ def cargar_datos_a_mongo():
     docs_stands = df_stands.to_dict(orient="records")
     db.stands.insert_many(docs_stands)
     print(f"-> {db.stands.count_documents({})} stands en MongoDB.")
+    # Índice multikey: una entrada por cada tag de cada stand -> $match por tags usa IXSCAN
+    db.stands.create_index("tags", name="idx_tags")
+    print("-> índice idx_tags creado sobre stands.tags")
 
     # 3. Cargar tags
     print(f"Cargando {len(df_tags)} tags...")

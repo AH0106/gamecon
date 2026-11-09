@@ -10,20 +10,20 @@ DEFAULT_URI = "mongodb+srv://cristobalcastro1_db_user:1234@cluster0.towey3r.mong
 client = MongoClient(os.getenv("MONGO_URI", DEFAULT_URI))
 db = client[os.getenv("MONGO_DB", "GameCon")]
 
-def registrar_interaccion(asistente_id, objetivo_id, tipo_interaccion, tags_objetivo):
+PESOS = {"favorito": 2, "visita": 1, "asistencia": 1}
+
+
+def registrar_interaccion(asistente_id, objetivo_id, tipo_interaccion, tags_objetivo, fecha=None):
     """Registra una interacción y actualiza el perfil deducido del asistente."""
-    #guardar la interaccion (sin tope)
     db.interacciones.insert_one({
         "asistente_id": asistente_id,
         "objetivo_id": objetivo_id,
-        "tipo": tipo_interaccion
+        "tipo": tipo_interaccion,
+        "fecha": fecha,
     })
 
-    #actualizar el perfil deducido
-    peso = 2 if tipo_interaccion == "favorito" else 1
-    for tag in tags_objetivo:
-        db.asistentes.update_one(
-            {"_id": asistente_id},
-            {"$inc": {f"intereses_deducidos.{tag}": peso}}
-        )
-    print(f"Interacción '{tipo_interaccion}' registrada, perfil actualizado")
+    # Un solo update con todos los $inc (antes era un update_one por tag)
+    peso = PESOS.get(tipo_interaccion, 1)
+    incrementos = {f"intereses_deducidos.{tag}": peso for tag in tags_objetivo}
+    if incrementos:
+        db.asistentes.update_one({"_id": asistente_id}, {"$inc": incrementos})

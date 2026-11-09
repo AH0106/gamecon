@@ -1,6 +1,8 @@
 import pandas as pd
 from limpieza import obtener_datos_limpios
 
+# Contenido adulto: fuera del vocabulario de una feria abierta a todo público
+
 
 def normalizar(tag):
     return str(tag).strip().lower().replace(" ", "_")
@@ -9,7 +11,7 @@ def generar_stands(df_games, df_anime, df_comics):
     stands = []
 
     # 1. Procesar Juegos (Publisher -> Stand)
-    for productor, group in df_games.groupby('productor'):
+    for n_juego, (productor, group) in enumerate(df_games.groupby('productor'), 1):
         generos = [
             normalizar(g) for g in group['genero'].dropna().unique()
             if pd.notna(g) and str(g).strip().lower() not in ['misc', 'nan', '']
@@ -17,47 +19,47 @@ def generar_stands(df_games, df_anime, df_comics):
         stands.append({
             "nombre": str(productor),
             "dominio": "juego",
-            "ubicacion": f"Zona Juegos - Stand {len(stands) + 1}",
+            "ubicacion": f"Zona Juegos - Stand {n_juego}",
             "tags": generos
         })
 
     # 2. Procesar Anime (Studios -> Stand)
-    for productor, group in df_anime.groupby('productor'):
-        raw_series = group['genero'].dropna().astype(str)
+    for n_anime, (productor, group) in enumerate(df_anime.groupby('productor'), 1):
+        raw_series = pd.concat([group['genero'], group['Themes']]).dropna().astype(str)
         raw_exploded = raw_series.str.split(',').explode().astype(str).str.strip()
         generos = [
             normalizar(g) for g in raw_exploded.unique()
-            if g and g.lower() not in ['nan', 'none', 'misc', '']
+            if g and g.lower() not in ['nan', 'none', 'misc', ''] 
         ]
         stands.append({
             "nombre": str(productor),
             "dominio": "anime",
-            "ubicacion": f"Zona Anime - Stand {len(stands) + 1}",
+            "ubicacion": f"Zona Anime - Stand {n_anime}",
             "tags": generos
         })
 
     # 3. Procesar Comics/Mangas (Publisher -> Stand)
-    for productor, group in df_comics.groupby('productor'):
+    for n_comic, (productor, group) in enumerate(df_comics.groupby('productor'), 1):
         stands.append({
             "nombre": str(productor),
             "dominio": "manga_comic",
-            "ubicacion": f"Zona Comics - Stand {len(stands) + 1}",
+            "ubicacion": f"Zona Comics - Stand {n_comic}",
             "tags": ["comic/manga"]
         })
 
     return pd.DataFrame(stands)
 
 def generar_vocabulario_tags(df_stands):
-    todos_los_tags = set(tag for tags_list in df_stands['tags'] for tag in tags_list)
-
+    filas = df_stands[["dominio", "tags"]].explode("tags").dropna()
     vocabulario = []
-    for tag in todos_los_tags:
-        frecuencia = sum(1 for tags_list in df_stands['tags'] if tag in tags_list)
+    for tag, grupo in filas.groupby("tags"):
+        dominios = sorted(grupo["dominio"].unique())
         vocabulario.append({
             "_id": tag,
-            "nivel": "general" if frecuencia > 10 else "especifico",
-            "origenes": [tag],
-            "frecuencia": frecuencia
+            # general = conecta 2 o mas dominios; especifico = vive en uno solo
+            "nivel": "general" if len(dominios) > 1 else "especifico",
+            "dominios": dominios,
+            "frecuencia": len(grupo)   # n de stands que lo tienen (para IDF)
         })
     return pd.DataFrame(vocabulario)
 
