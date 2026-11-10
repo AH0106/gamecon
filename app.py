@@ -12,7 +12,10 @@ load_dotenv(RAIZ / ".env")
 
 DEFAULT_URI = "mongodb+srv://cristobalcastro1_db_user:1234@cluster0.towey3r.mongodb.net/GameCon?retryWrites=true&w=majority"
 MONGO_URI = os.getenv("MONGO_URI", DEFAULT_URI)
-MONGO_DB = os.getenv("MONGO_DB", "GameCon")
+MONGO_DB = os.getenv("MONGO_DB", "bdgamecon")
+
+sys.path.append(str(RAIZ / "src"))
+from recomendaciones import recomendar_stands, obtener_perfil_asistente
 
 # Configuración de Streamlit
 st.set_page_config(page_title="GAMECON · Buscador de Stands", page_icon="🎮", layout="wide")
@@ -151,24 +154,19 @@ else:
         with c2:
             st.write("**Intereses Deducidos:**")
             ded = asistente.get("intereses_deducidos", {})
-            st.write(" ".join([f"`{t} (+{p})`" for t, p in ded.items()]) if ded else "*Sin interacciones*")
+            top_ded = sorted(ded.items(), key=lambda x: -x[1])[:8]
+            st.write(" ".join([f"`{t} (+{p})`" for t, p in top_ded]) if ded else "*Sin interacciones*")
 
         st.divider()
-        gustos = list(set(asistente.get("intereses_declarados", []) + list(ded.keys())))
+        # Misma lógica que src/recomendaciones.py (perfil top-5 deducidos + ranking IDF)
+        _, gustos = obtener_perfil_asistente(asistente_id)
+        st.write("**Tags usados para recomendar:** " + " ".join(f"`{t}`" for t in gustos))
 
-        if gustos:
-            pipeline = [
-                {"$match": {"tags": {"$in": gustos}}},
-                {"$project": {
-                    "nombre": 1, "dominio": 1, "ubicacion": 1, "tags": 1,
-                    "coincidencias": {"$size": {"$setIntersection": ["$tags", gustos]}}
-                }},
-                {"$sort": {"coincidencias": -1, "nombre": 1}},
-                {"$limit": 5}
-            ]
-            recs = list(db.stands.aggregate(pipeline))
-            st.subheader("Top 5 Stands Recomendados:")
-            for j, r in enumerate(recs, 1):
-                dom = r.get("dominio", "General")
-                ico = "🎮" if dom == "juego" else ("⛩️" if dom == "anime" else "📚")
-                st.write(f"**{j}. {ico} {r['nombre']}** ({r.get('ubicacion')}) — Coincidencias: `{r['coincidencias']}`")
+        recs = recomendar_stands(asistente_id, top_n=5) or []
+        st.subheader("Top 5 Stands Recomendados:")
+        for j, r in enumerate(recs, 1):
+            dom = r.get("dominio", "General")
+            ico = "🎮" if dom == "juego" else ("⛩️" if dom == "anime" else "📚")
+            st.write(f"**{j}. {ico} {r['nombre']}** ({r.get('ubicacion')}) — "
+                     f"Puntaje IDF: `{r['puntaje']:.2f}` · Coincidencias: `{r['coincidencias']}` "
+                     f"({', '.join(r['tags_coincidentes'])})")
